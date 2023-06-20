@@ -9,7 +9,7 @@ import {
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import ScrollIntoView from "react-scroll-into-view";
 import content from "../../../data";
 import useScrollDirection from "../../../customHook/useScrollDirection";
@@ -79,15 +79,13 @@ const NavBar: React.FC = () => {
               ))}
           </Collapse>
         </Box>
-        {!isOpen && (
-          <IconButton
-            display={{ base: "block", md: "none" }}
-            icon={<HamburgerIcon />}
-            variant="ghost"
-            onClick={onToggle}
-            aria-label="Toggle navigation"
-          />
-        )}
+        <IconButton
+          display={{ base: "block", md: "none" }}
+          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          variant="ghost"
+          onClick={onToggle}
+          aria-label="Toggle navigation"
+        />
       </Flex>
     </Fade>
   );
