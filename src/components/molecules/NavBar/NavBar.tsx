@@ -8,7 +8,6 @@ import {
   Text,
   useColorModeValue,
   useDisclosure,
-  useOutsideClick,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import ScrollIntoView from "react-scroll-into-view";
@@ -17,14 +16,8 @@ import useScrollDirection from "../../../customHook/useScrollDirection";
 
 const NavBar: React.FC = () => {
   const { navbar } = content;
-  const ref = React.useRef<HTMLInputElement>(null);
   const { isOpen, onToggle } = useDisclosure();
   const scrollDirection = useScrollDirection();
-
-  useOutsideClick({
-    ref: ref,
-    handler: onToggle,
-  });
 
   return (
     <Fade in={scrollDirection === "up"}>
@@ -74,7 +67,7 @@ const NavBar: React.FC = () => {
 
         {/* Mobile Menu */}
         {/* Collapsible Mobile Menu */}
-        <Box w="100%" display={["block", "none"]} ref={ref}>
+        <Box w="100%" display={["block", "none"]}>
           <Collapse in={isOpen} animateOpacity>
             {navbar?.menus &&
               navbar.menus.map((menu, index) => (
