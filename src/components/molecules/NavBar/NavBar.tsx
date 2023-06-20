@@ -39,8 +39,8 @@ const NavBar: React.FC = () => {
         <Flex
           position="fixed"
           left={5}
-          fontSize={"3xl"}
-          display={["none", "block"]}
+          fontSize={["lg", "3xl"]}
+          display={isOpen ? "none" : "block"}
         >
           <ScrollIntoView selector={"#Home"}>
             <Text fontFamily="Comforter" cursor="pointer">
