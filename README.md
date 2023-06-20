@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+# My Personal Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Website](https://img.shields.io/website?url=https://owenlee.bio)](https://owenlee.bio)
+[![Build Status](https://github.com/OwenLeee/personal-portfolio/actions/workflows/main.yml/badge.svg)](https://github.com/OwenLeee/personal-portfolio/actions)
 
-## Available Scripts
+This is my personal website built with TypeScript, React.js, and Chakra UI. It serves as an online resume and showcases my skills, projects, and experience.
 
-In the project directory, you can run:
+## Technologies Used
 
-### `yarn start`
+- TypeScript
+- React.js
+- Chakra UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Deployment
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The website is deployed to AWS S3 using GitHub Actions. Whenever changes are pushed to the main branch, the GitHub Actions workflow automatically builds and deploys the website.
 
-### `yarn test`
+The domain is registered with Route 53, and CloudFront is used to cache the static files, ensuring fast and efficient content delivery.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Folder Structure
 
-### `yarn build`
+The project follows the Atomic Design methodology for organizing components and follows a structured folder hierarchy. Here's an overview of the folder structure:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `src/`
+  - `components/`
+    - `atoms/`
+    - `molecules/`
+    - `organisms/`
+  - `pages/`
+  - `theme/`
+  - `data/`
+  - `customHook/`
+  - ...
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Website URL
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You can visit my personal website at [owenlee.bio](https://owenlee.bio). It provides an interactive and user-friendly experience to explore my skills, projects, and professional background.
 
-### `yarn eject`
+## Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+If you have any suggestions, bug reports, or feature requests, feel free to open an issue or submit a pull request. Contributions are welcome!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Contact
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+If you have any questions or want to get in touch, you can reach me at [owen55889@gmail.com](mailto:owen55889@gmail.com).
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
