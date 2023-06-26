@@ -16,7 +16,14 @@ const Landing: React.FC<{}> = () => {
 
   return (
     <>
-      <Flex w="100%" h="100%" align="center" justify="center">
+      <Flex
+        align="center"
+        justify="center"
+        direction="column"
+        w="100%"
+        minH="100vh"
+        id="Landing"
+      >
         <Flex
           align="start"
           justify="center"

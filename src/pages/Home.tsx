@@ -1,17 +1,11 @@
 import { Box } from "@chakra-ui/layout";
-import { Divider, Flex } from "@chakra-ui/react";
-import {
-  AboutMe,
-  Landing,
-  Skill,
-} from "../components/organisms";
+import { Divider } from "@chakra-ui/react";
+import { AboutMe, Landing, Skill } from "../components/organisms";
 
 const Home: React.FC<{}> = () => {
   return (
     <Box>
-      <Flex direction="column" minH="100vh" id="Home" justify={"center"}>
-        <Landing />
-      </Flex>
+      <Landing />
 
       <Divider />
 
@@ -20,7 +14,6 @@ const Home: React.FC<{}> = () => {
       <Divider />
 
       <Skill />
-
     </Box>
   );
 };

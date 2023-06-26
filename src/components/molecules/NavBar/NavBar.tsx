@@ -42,7 +42,7 @@ const NavBar: React.FC = () => {
           fontSize={["lg", "3xl"]}
           display={isOpen ? "none" : "block"}
         >
-          <ScrollIntoView selector={"#Home"}>
+          <ScrollIntoView selector={"#Landing"}>
             <Text fontFamily="Comforter" cursor="pointer">
               {navbar.logo}
             </Text>
