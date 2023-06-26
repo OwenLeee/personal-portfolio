@@ -3,9 +3,7 @@ import { Divider, Flex } from "@chakra-ui/react";
 import { NavBar } from "../components/molecules";
 import {
   AboutMe,
-  Education,
   Landing,
-  Professional,
   Skill,
 } from "../components/organisms";
 
@@ -23,15 +21,8 @@ const Home: React.FC<{}> = () => {
 
       <Divider />
 
-      <Professional />
-
-      <Divider />
-
       <Skill />
 
-      <Divider />
-
-      <Education />
     </Box>
   );
 };
