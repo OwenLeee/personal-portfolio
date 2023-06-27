@@ -1,6 +1,12 @@
 import { Box } from "@chakra-ui/layout";
 import { Divider } from "@chakra-ui/react";
-import { AboutMe, Landing, Portfolio, Skill } from "../components/organisms";
+import {
+  AboutMe,
+  Landing,
+  Portfolio,
+  Professional,
+  Skill,
+} from "../components/organisms";
 
 const Home: React.FC<{}> = () => {
   return (
@@ -18,6 +24,10 @@ const Home: React.FC<{}> = () => {
       <Divider />
 
       <Skill />
+
+      <Divider />
+
+      <Professional />
     </Box>
   );
 };
