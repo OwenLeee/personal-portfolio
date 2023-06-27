@@ -15,7 +15,6 @@ import {
   HStack,
   Tag,
   ThemeTypings,
-  Link,
 } from "@chakra-ui/react";
 
 type PortfolioCardProps = {
