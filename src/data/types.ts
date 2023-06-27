@@ -61,6 +61,20 @@ export type SkillsType = {
   }[];
 };
 
+export type Tag = { name: string; colorScheme: ThemeTypings["colorSchemes"] };
+
+export type PortfolioType = {
+  title: string;
+  projects: {
+    src: string;
+    alt: string;
+    title: string;
+    description: string;
+    link: string;
+    tags: Tag[];
+  }[];
+};
+
 export type ContentType = {
   navbar: NavbarType;
   landing: LandingType;
@@ -69,4 +83,5 @@ export type ContentType = {
   education: EducationType;
   certificates: CertificatesType;
   skills: SkillsType;
+  portfolio: PortfolioType;
 };

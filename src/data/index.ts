@@ -5,6 +5,7 @@ import landing from "./landing";
 import navbar from "./navbar";
 import professionals from "./professionals";
 import skills from "./skills";
+import portfolio from "./portfolio";
 import { ContentType } from "./types";
 
 const content: ContentType = {
@@ -15,6 +16,7 @@ const content: ContentType = {
   education,
   certificates,
   skills,
+  portfolio
 };
 
 export default content;
