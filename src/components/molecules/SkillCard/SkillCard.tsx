@@ -8,6 +8,7 @@ import {
   Stack,
   StackDivider,
   ThemeTypings,
+  Text,
 } from "@chakra-ui/react";
 
 type Skillset = {
@@ -29,7 +30,7 @@ const SkillCard: React.FC<SkillCardProps> = ({
   return (
     <Card borderRadius="30px" borderColor="red">
       <CardHeader>
-        <Heading size="md">{stack}</Heading>
+        <Heading size={["md", "lg"]}>{stack}</Heading>
       </CardHeader>
 
       <CardBody>
@@ -37,7 +38,7 @@ const SkillCard: React.FC<SkillCardProps> = ({
           {skills &&
             skills.map((skill, index) => (
               <Box key={index + "skill"}>
-                <Heading size="sm">{skill.skill}</Heading>
+                <Text fontSize={["md", "lg"]}>{skill.skill}</Text>
                 <Progress
                   borderRadius="15px"
                   value={skill.rating}
