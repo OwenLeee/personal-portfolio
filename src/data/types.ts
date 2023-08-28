@@ -1,4 +1,3 @@
-import { ThemeTypings } from "@chakra-ui/react";
 
 export type NavbarType = { menus: string[]; logo: string };
 
@@ -53,7 +52,6 @@ export type SkillsType = {
   title: string;
   skillDetails: {
     category: string;
-    colorScheme: ThemeTypings["colorSchemes"];
     skillsRating: {
       skill: string;
       rating: number;
@@ -61,7 +59,7 @@ export type SkillsType = {
   }[];
 };
 
-export type Tag = { name: string; colorScheme: ThemeTypings["colorSchemes"] };
+export type Tag = { name: string; };
 
 export type PortfolioType = {
   title: string;

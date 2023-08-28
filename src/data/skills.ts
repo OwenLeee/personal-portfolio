@@ -5,7 +5,6 @@ export default {
   skillDetails: [
     {
       category: "Programming Language",
-      colorScheme: "red",
       skillsRating: [
         {
           skill: "JavaScript / TypeScript",
@@ -31,7 +30,6 @@ export default {
     },
     {
       category: "Backend",
-      colorScheme: "orange",
       skillsRating: [
         {
           skill: "Node.JS (Express)",
@@ -65,7 +63,6 @@ export default {
     },
     {
       category: "Frontend",
-      colorScheme: "green",
       skillsRating: [
         {
           skill: "React.JS",
@@ -91,7 +88,6 @@ export default {
     },
     {
       category: "DevOps / Cloud",
-      colorScheme: "teal",
       skillsRating: [
         {
           skill: "AWS",
@@ -117,7 +113,6 @@ export default {
     },
     {
       category: "Message Queue",
-      colorScheme: "blue",
       skillsRating: [
         {
           skill: "Kafka",
@@ -131,7 +126,6 @@ export default {
     },
     {
       category: "API",
-      colorScheme: "purple",
       skillsRating: [
         {
           skill: "RESTful API",

@@ -3,51 +3,39 @@ import { PortfolioType, Tag } from "./types";
 const tagsMap: { [key: string]: Tag } = {
   react: {
     name: "React",
-    colorScheme: "cyan",
   },
   html: {
     name: "HTML",
-    colorScheme: "orange",
   },
   css: {
     name: "CSS",
-    colorScheme: "teal",
   },
   nodejs: {
     name: "Node.js",
-    colorScheme: "green",
   },
   express: {
     name: "Express",
-    colorScheme: "green",
   },
   socketio: {
     name: "Socket.io",
-    colorScheme: "black",
   },
   postgresql: {
     name: "PostgreSQL",
-    colorScheme: "blue",
   },
   vanillaJS: {
     name: "VanillaJS",
-    colorScheme: "yellow",
   },
   fullstack: {
     name: "Fullstack",
-    colorScheme: "purple",
   },
   aws: {
     name: "AWS",
-    colorScheme: "orange",
   },
   scss: {
     name: "SCSS",
-    colorScheme: "pink",
   },
   typescript: {
     name: "TypeScript",
-    colorScheme: "blue",
   },
 };
 
