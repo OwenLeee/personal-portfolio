@@ -1,6 +1,6 @@
 import { NavbarType } from "./types";
 
 export default {
-  menus: ["About", "Portfolio", "Skill", "Professional"],
+  menus: ["About", "Resume", "Portfolio"],
   logo: "OwenLee",
 } as NavbarType;
