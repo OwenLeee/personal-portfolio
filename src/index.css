@@ -61,4 +61,28 @@
     top: 0;
     width: 2px;
   }
+
+  .fixed-wrapper {
+    @apply relative my-0 mx-[50px];
+  }
+
+  .fixed-block {
+    @apply absolute bottom-[34px];
+  }
+
+  .block-left {
+    @apply left-0;
+  }
+
+  .block-right {
+    @apply right-0;
+  }
+
+  .social-icons {
+    @apply mb-0;
+  }
+
+  .social-icons > li {
+    @apply mt-4 text-center leading-none;
+  }
 }

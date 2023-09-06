@@ -1,12 +1,13 @@
-
 export type NavbarType = { menus: string[]; logo: string };
+
+export type SocialMedia = "Linkedin" | "GitHub" | "Email";
 
 export type LandingType = {
   greetingWord: string;
   myName: string;
   briefDescriptions: string[];
   socialMediasMetadata: {
-    socialMedia: string;
+    socialMedia: SocialMedia;
     ariaLabel: string;
     link: string;
   }[];
@@ -59,7 +60,7 @@ export type SkillsType = {
   }[];
 };
 
-export type Tag = { name: string; };
+export type Tag = { name: string };
 
 export type PortfolioType = {
   title: string;

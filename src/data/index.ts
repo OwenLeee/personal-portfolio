@@ -16,7 +16,7 @@ const content: ContentType = {
   education,
   certificates,
   skills,
-  portfolio
+  portfolio,
 };
 
 export default content;
