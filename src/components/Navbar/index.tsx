@@ -26,8 +26,9 @@ const Navbar: React.FC<{}> = () => {
   };
 
   return (
-    <nav className="absolute top-0 inset-x-0 px-10 py-8 flex justify-between items-center">
-      <div>{navbar.logo}</div>
+    <nav className="absolute top-0 inset-x-0 px-10 py-4 flex justify-between items-center bg-black text-white z-10">
+      <img src="logo.svg" className="h-14 bg-auto bg-center relative top-1" />
+
       {/* Desktop Navigation 640px up -> flex / below -> hidden */}
       <div className="sm:flex hidden">{menuList()}</div>
 
