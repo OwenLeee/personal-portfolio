@@ -19,7 +19,7 @@ const SocialMediaBar: React.FC<{}> = () => {
         socialMediasMetadata.map((metadata, idx) => {
           return (
             <li key={`${metadata.socialMedia}-${idx}`}>
-              <a href={metadata.link} target="_blank">
+              <a href={metadata.link} target="_blank" rel="noreferrer">
                 {socialMediaIconMap[metadata.socialMedia]}
               </a>
             </li>
