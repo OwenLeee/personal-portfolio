@@ -85,4 +85,8 @@
   .social-icons > li {
     @apply mt-4 text-center leading-none;
   }
+
+  #overlay-effect {
+    @apply bg-[#181818] bottom-0 block fixed top-0 z-50 w-full translate-y-full;
+  }
 }

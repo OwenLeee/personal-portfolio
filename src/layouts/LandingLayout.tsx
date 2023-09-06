@@ -30,6 +30,7 @@ const LandingLayout: React.FC<ILandingLayout> = ({
 
   return (
     <>
+      <div id="overlay-effect" className="animate-up"></div>
       <header>{navbar}</header>
       <section className="relative">
         <div className="flex h-screen w-3/4 mx-auto sm:p-1 lg:p-3 col-8 items-center justify-center">

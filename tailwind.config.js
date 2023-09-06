@@ -9,21 +9,27 @@ module.exports = {
       animation: {
         slide: "slide 3s ease-in-out infinite",
         opacity: "opacity 3s ease-in-out infinite",
+        down: "overlayEffectDown 1s ease-in-out both",
+        up: "overlayEffectUp 1s ease-in-out both",
       },
       keyframes: {
         slide: {
-          "0%": { width: "0%" },
-          "20%": { width: "0%" },
-          "60%": { width: "100%", paddingRight: "0.5rem" },
-          "70%": { width: "100%", paddingRight: "0.5rem" },
-          "100%": { width: "0%" },
+          "0%, 20%, 100%": { width: "0%" },
+          "60%, 70%": { width: "100%", paddingRight: "0.5rem" },
         },
         opacity: {
-          "0%": { opacity: 0 },
-          "15%": { opacity: 0 },
-          "60%": { opacity: 1 },
-          "70%": { opacity: 1 },
-          "100%": { opacity: 0 },
+          "0%, 15%, 100%": { opacity: 0 },
+          "60%, 70%": { opacity: 1 },
+        },
+        overlayEffectDown: {
+          "0%": { transform: "translateY(-100%)" },
+          "35%, 65%": { transform: "translateY(0%)" },
+          "100%": { transform: "translateY(100%)" },
+        },
+        overlayEffectUp: {
+          "0%": { transform: "translateY(100%)" },
+          "35%, 65%": { transform: "translateY(0%)" },
+          "100%": { transform: "translateY(-100%)" },
         },
       },
     },
