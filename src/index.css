@@ -87,6 +87,13 @@
   }
 
   #overlay-effect {
-    @apply bg-[#181818] bottom-0 block fixed top-0 z-50 w-full translate-y-full;
+    @apply bg-[#181818] bottom-0 block fixed top-0 z-99999 w-full translate-y-full;
+  }
+
+  .lightbox-wrapper {
+    @apply bg-[#101010];
+  }
+  .close-btn {
+    @apply fixed right-[4vw] top-[35px] z-99;
   }
 }

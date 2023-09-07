@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { LightBoxContext } from "../context";
+import LightBoxLayout from "./LightBoxLayout";
 
 type MainContent = {
   name: string;
@@ -18,6 +20,7 @@ const LandingLayout: React.FC<ILandingLayout> = ({
 }) => {
   const { name, titles } = main;
 
+  const { currentLightBoxId } = useContext(LightBoxContext);
   const [headlineIdx, setHeadlineIdx] = useState<number>(0);
 
   useEffect(() => {
@@ -28,9 +31,20 @@ const LandingLayout: React.FC<ILandingLayout> = ({
     return () => clearInterval(interval);
   }, [titles.length]);
 
+  const initialLightBoxStage = currentLightBoxId === ""; // TODO: group in constant file
+
   return (
     <>
-      <div id="overlay-effect" className="animate-up"></div>
+      <div
+        id="overlay-effect"
+        className={`${
+          initialLightBoxStage
+            ? ""
+            : currentLightBoxId !== "empty" // TODO: group in constant file
+            ? "animate-up"
+            : "animate-down"
+        }`}
+      ></div>
       <header>{navbar}</header>
       <section className="relative">
         <div className="flex h-screen w-3/4 mx-auto sm:p-1 lg:p-3 col-8 items-center justify-center">
@@ -38,7 +52,7 @@ const LandingLayout: React.FC<ILandingLayout> = ({
             <h1 className="home-name">{name}</h1>
             <h4 className="home-headline w-full animate-opacity">
               <span>I'm a&nbsp;</span>
-              <span className="single-headline"> 
+              <span className="single-headline">
                 <b className={`animate-slide single-headline-title`}>
                   {titles[headlineIdx]}
                 </b>
@@ -49,6 +63,10 @@ const LandingLayout: React.FC<ILandingLayout> = ({
         <div className="fixed-wrapper">
           <div className="fixed-block block-right">{socialMedia}</div>
         </div>
+        {/* lightbox */}
+        <LightBoxLayout lightBoxId="About" />
+        <LightBoxLayout lightBoxId="Resume" />
+        <LightBoxLayout lightBoxId="Portfolio" />
       </section>
     </>
   );

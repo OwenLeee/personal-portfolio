@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import content from "../../data";
+import { LightBoxContext } from "../../context";
 
 const Navbar: React.FC<{}> = () => {
   const { navbar } = content;
+
+  const { setCurrentLightBoxId } = useContext(LightBoxContext);
   const [toggle, setToggle] = useState(false);
 
   const menuList = () => {
@@ -14,7 +17,10 @@ const Navbar: React.FC<{}> = () => {
             <li
               className="nav-item"
               key={menu}
-              onClick={() => setToggle(!toggle)}
+              onClick={() => {
+                setCurrentLightBoxId(menu);
+                setToggle(!toggle);
+              }}
             >
               <a className="nav-link" href={`#${menu}`}>
                 {menu}
