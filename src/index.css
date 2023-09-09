@@ -165,6 +165,10 @@
     @apply py-6 mb-0 text-sm;
   }
 
+  .content-img {
+    @apply rounded-full h-[200px] w-[200px] md:h-[250px] md:w-[250px] lg:w-[400px] lg:bg-transparent lg:border-[rgba(0,0,0,.18)] lg:p-1 lg:rounded lg:h-auto lg:max-h-[450px] object-cover object-top mx-auto mb-10;
+  }
+
   .single-info {
     @apply block mb-2.5 w-auto;
   }

@@ -47,15 +47,11 @@ const AboutMePage: React.FC<AboutMePageProps> = () => {
       <div className="info-section">
         <div className="row">
           {/* picture part */}
-          <div className="col-12">
-            <img
-              src={icon}
-              className="rounded-full h-[200px] w-[200px] md:h-[250px] md:w-[250px] object-cover object-top mx-auto mb-10"
-              alt="Owen Lee"
-            />
+          <div className="col-12 lg:basis-5/12">
+            <img src={icon} className="content-img" alt="Owen Lee" />
           </div>
           {/* content part */}
-          <div className="col-12">
+          <div className="col-12 lg:basis-7/12">
             <h2 className="content-subtitle">Who am i?</h2>
             <h6 className="content-title">
               I'm Owen Lee, a software developer and full-stack developer
