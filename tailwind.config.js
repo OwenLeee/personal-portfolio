@@ -3,11 +3,17 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      maxWidth: {
+        "1/2": "50%",
+      },
       fontSize: {
-        "4xl": "42px"
+        "4xl": "42px",
       },
       colors: {
         primary: "#009e66",
+        secondary: "#F0F0F0",
+        tertiary: "#9F9F9F",
+        label: "#DADADA",
       },
       margin: {
         17: "70px",

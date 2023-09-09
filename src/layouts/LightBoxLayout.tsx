@@ -31,7 +31,7 @@ const LightBoxLayout: React.FC<ILightBoxLayout> = ({
         isActive
           ? `animate-fadeIn ${lightBoxId.toLowerCase()}-on`
           : `animate-fadeOut ${lightBoxId.toLowerCase()}-off`
-      } delay-500`}
+      } delay-500 overflow-auto`}
       style={{
         position: "fixed",
         width: "100%",
@@ -51,7 +51,7 @@ const LightBoxLayout: React.FC<ILightBoxLayout> = ({
             }),
       }}
     >
-      <div className="lightbox-container text-white">
+      <div className="lightbox-container text-secondary">
         <div className="close-btn hover:cursor-pointer" onClick={closeLightBox}>
           <AiOutlineClose size={33} />
         </div>
