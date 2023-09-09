@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import { LightBoxContext } from "../context";
-import LightBoxLayout from "./LightBoxLayout";
 
 type MainContent = {
   name: string;
@@ -11,12 +10,16 @@ interface ILandingLayout {
   navbar: React.ReactElement;
   main: MainContent;
   socialMedia: React.ReactElement;
+  lightBoxes: React.FunctionComponent[];
+  children?: React.ReactNode;
 }
 
 const LandingLayout: React.FC<ILandingLayout> = ({
   navbar,
   main,
   socialMedia,
+  lightBoxes,
+  children,
 }) => {
   const { name, titles } = main;
 
@@ -64,9 +67,10 @@ const LandingLayout: React.FC<ILandingLayout> = ({
           <div className="fixed-block block-right">{socialMedia}</div>
         </div>
         {/* lightbox */}
-        <LightBoxLayout lightBoxId="About" />
-        <LightBoxLayout lightBoxId="Resume" />
-        <LightBoxLayout lightBoxId="Portfolio" />
+        {lightBoxes?.length &&
+          lightBoxes.map((LightBox, idx) => (
+            <LightBox key={`LightBox-${idx}`} />
+          ))}
       </section>
     </>
   );

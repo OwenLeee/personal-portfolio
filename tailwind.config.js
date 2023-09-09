@@ -3,6 +3,15 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontSize: {
+        "4xl": "42px"
+      },
+      colors: {
+        primary: "#009e66",
+      },
+      margin: {
+        17: "70px",
+      },
       zIndex: {
         99: "99",
         99999: "99999",
@@ -17,6 +26,7 @@ module.exports = {
         up: "overlayEffectUp 1s ease-in-out both",
         fadeIn: "fadeIn",
         fadeOut: "fadeOut",
+        barAnimation: "barAnimation 3s linear infinite",
       },
       keyframes: {
         slide: {
@@ -44,6 +54,14 @@ module.exports = {
         fadeOut: {
           "0%": { opacity: 1 },
           "100%": { opacity: 0 },
+        },
+        barAnimation: {
+          from: {
+            transform: "translateX(0)",
+          },
+          to: {
+            transform: "translateX(75px)",
+          },
         },
       },
     },

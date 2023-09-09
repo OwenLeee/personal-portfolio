@@ -96,4 +96,41 @@
   .close-btn {
     @apply fixed right-[4vw] top-[35px] z-99;
   }
+
+  .lightbox-container {
+    @apply mx-auto px-1.5 w-full;
+  }
+
+  .lightbox-content {
+    @apply my-17 mx-0 w-full;
+  }
+
+  .animated-bar {
+    content: "";
+    display: block;
+    height: 4px;
+    left: 0;
+    margin: 0 auto 0 auto;
+    position: relative;
+    right: 0;
+    width: 75px;
+    @apply bg-primary;
+  }
+
+  .animated-bar:before {
+    left: 8px;
+  }
+  .animated-bar:after {
+    left: 0px;
+  }
+  .animated-bar:before,
+  .animated-bar:after {
+    background-color: #101010;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 4px;
+    @apply animate-barAnimation;
+  }
 }

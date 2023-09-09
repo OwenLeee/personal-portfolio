@@ -13,10 +13,10 @@ const Navbar: React.FC<{}> = () => {
     return (
       <ul className="flex flex-col sm:items-center sm:flex-row">
         {navbar?.menus &&
-          navbar.menus.map((menu) => (
+          navbar.menus.map((menu, idx) => (
             <li
               className="nav-item"
-              key={menu}
+              key={`${menu}-${idx}`}
               onClick={() => {
                 setCurrentLightBoxId(menu);
                 setToggle(!toggle);

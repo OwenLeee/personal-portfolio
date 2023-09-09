@@ -1,12 +1,21 @@
 import { useCallback, useContext } from "react";
 import { LightBoxContext } from "../context";
 import { AiOutlineClose } from "react-icons/ai";
+import { LightBoxHeader } from "../components";
 
 interface ILightBoxLayout {
   lightBoxId: string;
+  section: string;
+  sectionDescription: string;
+  children: React.ReactNode;
 }
 
-const LightBoxLayout: React.FC<ILightBoxLayout> = ({ lightBoxId }) => {
+const LightBoxLayout: React.FC<ILightBoxLayout> = ({
+  lightBoxId,
+  section,
+  sectionDescription,
+  children,
+}) => {
   const { currentLightBoxId, setCurrentLightBoxId } =
     useContext(LightBoxContext);
 
@@ -42,12 +51,16 @@ const LightBoxLayout: React.FC<ILightBoxLayout> = ({ lightBoxId }) => {
             }),
       }}
     >
-      <div className="container text-white">
-        <div className="close-btn" onClick={closeLightBox}>
+      <div className="lightbox-container text-white">
+        <div className="close-btn hover:cursor-pointer" onClick={closeLightBox}>
           <AiOutlineClose size={33} />
         </div>
-        <div className="row">
-          <div className="col-12"></div>
+        <div className="lightbox-content">
+          <LightBoxHeader
+            section={section}
+            sectionDescription={sectionDescription}
+          />
+          {children}
         </div>
       </div>
     </div>
