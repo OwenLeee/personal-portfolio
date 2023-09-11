@@ -49,11 +49,11 @@ const LandingLayout: React.FC<ILandingLayout> = ({
         }`}
       ></div>
       <header>{navbar}</header>
-      <section className="relative">
+      <section className="relative bg-black"> {/* TODO: Change background img */}
         <div className="flex h-screen w-3/4 mx-auto sm:p-1 lg:p-3 col-8 items-center justify-center">
-          <div className="flex flex-col text-center w-full">
+          <div className="flex flex-col text-center w-full text-white">
             <h1 className="home-name">{name}</h1>
-            <h4 className="home-headline w-full animate-opacity">
+            <h4 className="home-headline w-full animate-opacity text-[26px] md:text-3xl lg:text-[32px]">
               <span>I'm a&nbsp;</span>
               <span className="single-headline">
                 <b className={`animate-slide single-headline-title`}>

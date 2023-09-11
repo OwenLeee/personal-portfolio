@@ -85,7 +85,7 @@ const AboutMePage: React.FC<AboutMePageProps> = () => {
               <a
                 href="static/resume.pdf"
                 download="Resume - Owen Lee.pdf"
-                className="btn download-btn mr-[23px] mb-[27px] sm:mb-0 text-sm"
+                className="btn download-btn mr-[23px] mb-[27px] sm:mb-0 text-sm text-white"
               >
                 Download CV
               </a>

@@ -1,7 +1,7 @@
 import { useCallback, useContext } from "react";
 import { LightBoxContext } from "../context";
 import { AiOutlineClose } from "react-icons/ai";
-import { LightBoxHeader } from "../components";
+import { AnimatedBar, SectionHeader } from "../components";
 
 interface ILightBoxLayout {
   lightBoxId: string;
@@ -51,15 +51,17 @@ const LightBoxLayout: React.FC<ILightBoxLayout> = ({
             }),
       }}
     >
-      <div className="lightbox-container text-secondary">
+      <div className="lightbox-container">
         <div className="close-btn hover:cursor-pointer" onClick={closeLightBox}>
-          <AiOutlineClose size={33} />
+          <AiOutlineClose size={33} color="white" />
         </div>
         <div className="lightbox-content">
-          <LightBoxHeader
+          <SectionHeader
             section={section}
             sectionDescription={sectionDescription}
-          />
+          >
+            <AnimatedBar />
+          </SectionHeader>
           {children}
         </div>
       </div>
