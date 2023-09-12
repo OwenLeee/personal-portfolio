@@ -9,7 +9,7 @@
   }
 
   body {
-    @apply h-full grid relative leading-[1.95] text-[14px] text-tertiary; /* TODO: add font family */
+    @apply h-full grid relative leading-[1.95] text-[14px] text-tertiary;
   }
 
   h1 {
@@ -30,6 +30,28 @@
   h5 {
     @apply text-xl;
   }
+
+  a {
+    @apply bg-transparent transition-all duration-150 ease-in-out delay-0;
+  }
+
+  a:not(.btn) {
+    @apply text-primary transition-all duration-150 ease-in-out;
+  }
+
+  a:not(.btn):focus,
+  a:not(.btn):hover {
+    @apply text-[#005235];
+  }
+
+  a:focus,
+  a:hover {
+    @apply no-underline;
+  }
+
+  img {
+    @apply border-none align-middle;
+  }
 }
 
 @layer components {
@@ -38,11 +60,15 @@
   }
 
   .col-12 {
-    @apply max-w-full flex-grow-0 flex-shrink-0 basis-full px-[15px];
+    @apply max-w-full flex-grow-0 flex-shrink-0 basis-full px-[15px] relative;
   }
 
   .col-6 {
-    @apply max-w-1/2 flex-grow-0 flex-shrink-0 basis-2/4 px-[15px];
+    @apply max-w-1/2 flex-grow-0 flex-shrink-0 basis-2/4 px-[15px] relative;
+  }
+
+  .col-4 {
+    @apply max-w-1/3 flex-grow-0 flex-shrink-0 basis-1/3 px-[15px] relative;
   }
 
   .col-block {
@@ -54,6 +80,10 @@
   }
   .nav-item {
     @apply py-2;
+  }
+
+  .nav-item .nav-link {
+    @apply text-[#e6e6e6] text-[15px] p-0 hover:text-primary-light;
   }
 
   .home-name {
@@ -113,6 +143,10 @@
 
   .social-icons > li {
     @apply text-center leading-none;
+  }
+
+  .social-icons > li > a {
+    @apply text-zinc-200 hover:text-primary-light;
   }
 
   #overlay-effect {
@@ -304,5 +338,95 @@
 
   .section-heading.page-heading > .section-title {
     @apply mb-[37px] text-[36px] sm:text-[42px] lg:text-[46px];
+  }
+
+  .list-inline {
+    @apply list-none pl-0;
+  }
+
+  .portfolio-section .filter-control {
+    @apply mb-4 text-center;
+  }
+
+  .list-inline-item {
+    @apply inline-block;
+  }
+
+  .filter-control > li {
+    @apply border-transparent border-b-[1px] border-solid text-[#cecece] cursor-pointer text-[14px] md:text-[15px] font-normal tracking-[0.3px] relative transition-all duration-100 ease-in-out;
+  }
+
+  .filter-control > li:not(:last-child) {
+    @apply mr-4;
+  }
+
+  .filter-control > li.tab-active {
+    @apply text-primary-light;
+  }
+
+  .filter-control > li.tab-active,
+  .filter-control > li {
+    @apply hover:text-primary-light;
+  }
+
+  .filter-control > li.tab-active:before,
+  .filter-control > li:hover:before {
+    @apply bg-primary-light bottom-0 content-[""] h-[1px] absolute w-full;
+  }
+
+  .portfolio-section .portfolio-grid .portfolio-wrapper {
+    @apply flex align-middle mb-2 overflow-hidden relative items-center;
+  }
+
+  .portfolio-section .portfolio-grid .portfolio-wrapper:hover:before {
+    @apply opacity-100 visible;
+  }
+
+  .portfolio-section .portfolio-grid .portfolio-wrapper .portfolio-img {
+    @apply h-[150px] md:h-[200px] lg:h-[250px] w-full object-cover object-center;
+  }
+
+  .portfolio-section .portfolio-grid .portfolio-wrapper:before {
+    @apply bg-[rgba(0,0,0,0.9)] bottom-0 content-[""] h-full opacity-0 absolute transition-all duration-150 ease-in-out invisible w-full;
+  }
+
+  .img-fluid {
+    @apply h-auto max-w-full;
+  }
+
+  .portfolio-section .portfolio-grid .portfolio-wrapper > .img-fluid {
+    @apply w-full;
+  }
+
+  .portfolio-section .portfolio-grid .portfolio-wrapper .item-content {
+    @apply left-0 opacity-0 py-[3px] px-[18px] absolute text-center transition-all duration-150 ease-in-out invisible w-full z-[2];
+  }
+
+  .portfolio-section .portfolio-grid .portfolio-wrapper:hover .item-content {
+    @apply opacity-100 visible;
+  }
+
+  .portfolio-section
+    .portfolio-grid
+    .portfolio-wrapper
+    .item-content
+    .content-title {
+    @apply text-white text-[15px] font-normal leading-[1.8] mb-[10px];
+  }
+
+  .portfolio-section
+    .portfolio-grid
+    .portfolio-wrapper
+    .item-content
+    .content-more {
+    @apply text-primary inline-block font-semibold;
+  }
+
+  .item-tags {
+    @apply flex flex-wrap justify-start mb-[30px] gap-0.5;
+  }
+
+  .tag {
+    @apply bg-blue-900 px-2 py-1  rounded-md align-middle inline-block items-center max-w-full leading-[1.2] outline-none text-white text-[9px] md:text-[10px] outline-offset-2 text-ellipsis overflow-hidden whitespace-nowrap bg-opacity-60;
   }
 }

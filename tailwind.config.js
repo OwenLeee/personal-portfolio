@@ -8,10 +8,11 @@ module.exports = {
       },
       maxWidth: {
         "1/2": "50%",
+        "1/3": "33.333333%",
       },
       fontSize: {},
       colors: {
-        primary: "#009e66",
+        primary: { light: "#00bd7a", DEFAULT: "#009e66" },
         secondary: "#F0F0F0",
         tertiary: "#9F9F9F",
         label: "#DADADA",

@@ -5,6 +5,7 @@ import SocialMediaBar from "./SocialMediaBar";
 import AnimatedBar from "./AnimatedBar";
 import Skills from "./Skills";
 import Resume from "./Resume";
+import { PortfolioCard, PortfolioFilter } from "./Portfolio";
 
 export {
   SectionHeader,
@@ -14,4 +15,6 @@ export {
   AnimatedBar,
   Skills,
   Resume,
+  PortfolioCard,
+  PortfolioFilter,
 };

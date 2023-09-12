@@ -60,7 +60,7 @@ export type SkillsType = {
   }[];
 };
 
-export type Tag = { name: string };
+export type Tag = { name: string; bgColor: string };
 
 export type PortfolioType = {
   title: string;

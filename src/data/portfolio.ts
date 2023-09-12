@@ -1,41 +1,65 @@
 import { PortfolioType, Tag } from "./types";
 
-const tagsMap: { [key: string]: Tag } = {
+export const tagsMap: { [key: string]: Tag } = {
   react: {
     name: "React",
+    bgColor: "bg-sky-400/40",
   },
   html: {
     name: "HTML",
+    bgColor: "bg-orange-600/40",
   },
   css: {
     name: "CSS",
+    bgColor: "bg-blue-500/40",
   },
   nodejs: {
     name: "Node.js",
+    bgColor: "bg-emerald-500/40",
   },
   express: {
     name: "Express",
+    bgColor: "bg-emerald-700/40",
   },
   socketio: {
     name: "Socket.io",
+    bgColor: "bg-red-900/40",
   },
   postgresql: {
     name: "PostgreSQL",
+    bgColor: "bg-blue-900/40",
   },
   vanillaJS: {
     name: "VanillaJS",
+    bgColor: "bg-yellow-300/40",
   },
   fullstack: {
     name: "Fullstack",
+    bgColor: "bg-fuchsia-800/40",
   },
   aws: {
     name: "AWS",
+    bgColor: "bg-amber-500/40",
   },
   scss: {
     name: "SCSS",
+    bgColor: "bg-pink-500/40",
   },
   typescript: {
     name: "TypeScript",
+    bgColor: "bg-blue-500/40",
+  },
+  tailwindCSS: {
+    name: "TailwindCSS",
+    bgColor: "bg-cyan-300/40",
+  },
+  githubActions: {
+    name: "Github Action",
+    bgColor: "bg-gray-800/40",
+  },
+  python: {
+    name: "Python",
+    bgColor: "bg-yellow-200/40",
   },
 };
 
