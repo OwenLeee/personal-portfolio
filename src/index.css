@@ -269,7 +269,7 @@
   }
 
   .resume-section .col-12:first-child .resume-item:last-child {
-    @apply mb-[60px];
+    @apply mb-[60px] lg:mb-0;
   }
 
   .resume-item:last-child {
