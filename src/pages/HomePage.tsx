@@ -22,6 +22,7 @@ const HomePage: React.FC<HomePageProps> = () => {
     <LightBoxContext.Provider value={LightBoxSharedValue}>
       <LandingLayout
         navbar={<Navbar />}
+        video="bg-video.mp4"
         main={{
           name: "Owen Lee",
           titles: ["Software Developer", "Full-Stack Developer"],

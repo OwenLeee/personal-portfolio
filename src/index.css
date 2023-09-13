@@ -83,7 +83,15 @@
   }
 
   .nav-item .nav-link {
-    @apply text-[#e6e6e6] text-[15px] p-0 hover:text-primary-light;
+    @apply text-[#e6e6e6] text-[16px] p-0 hover:text-primary-light;
+  }
+
+  #background-video-overlay {
+    @apply bg-black/50 fixed top-0 left-0 min-w-full min-h-full z-[-1];
+  }
+
+  #background-video {
+    @apply fixed top-0 left-0 min-w-full min-h-full z-[-2] object-cover saturate-100;
   }
 
   .home-name {

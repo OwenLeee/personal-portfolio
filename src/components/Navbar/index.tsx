@@ -32,7 +32,7 @@ const Navbar: React.FC<{}> = () => {
   };
 
   return (
-    <nav className="absolute top-0 inset-x-0 px-10 py-4 flex justify-between items-center bg-black text-white z-10">
+    <nav className="absolute top-0 inset-x-0 px-10 py-4 flex justify-between items-center bg-transparent text-white z-10">
       <img
         src="logo.svg"
         className="h-14 bg-auto bg-center relative top-1"

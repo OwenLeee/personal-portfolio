@@ -8,6 +8,7 @@ type MainContent = {
 
 interface ILandingLayout {
   navbar: React.ReactElement;
+  video: string;
   main: MainContent;
   socialMedia: React.ReactElement;
   lightBoxes: React.FunctionComponent[];
@@ -16,6 +17,7 @@ interface ILandingLayout {
 
 const LandingLayout: React.FC<ILandingLayout> = ({
   navbar,
+  video,
   main,
   socialMedia,
   lightBoxes,
@@ -49,7 +51,11 @@ const LandingLayout: React.FC<ILandingLayout> = ({
         }`}
       ></div>
       <header>{navbar}</header>
-      <section className="relative bg-black"> {/* TODO: Change background img */}
+      <section className="relative">
+        <div id="background-video-overlay" />
+        <video autoPlay muted loop id="background-video">
+          <source src={`/static/${video}`} type="video/mp4" />
+        </video>
         <div className="flex h-screen w-3/4 mx-auto sm:p-1 lg:p-3 col-8 items-center justify-center">
           <div className="flex flex-col text-center w-full text-white">
             <h1 className="home-name">{name}</h1>
