@@ -1,16 +1,14 @@
-import SectionHeader from "./SectionHeader";
-import Navbar from "./Navbar";
-import PortfolioLightBox from "../pages/LightBoxes/PortfolioPage";
-import SocialMediaBar from "./SocialMediaBar";
-import AnimatedBar from "./AnimatedBar";
-import Skills from "./Skills";
-import Resume from "./Resume";
+import { AnimatedBar } from "./AnimatedBar";
+import { Navbar } from "./Navbar";
 import { PortfolioCard, PortfolioFilter } from "./Portfolio";
+import { Resume } from "./Resume";
+import { SectionHeader } from "./SectionHeader";
+import { Skills } from "./Skills";
+import { SocialMediaBar } from "./SocialMediaBar";
 
 export {
   SectionHeader,
   Navbar,
-  PortfolioLightBox,
   SocialMediaBar,
   AnimatedBar,
   Skills,
