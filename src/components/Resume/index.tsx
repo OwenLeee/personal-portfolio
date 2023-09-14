@@ -6,14 +6,12 @@ interface ResumeProps {
 }
 const Resume: React.FC<ResumeProps> = ({ heading, items }) => {
   return (
-    <div className="col-12 lg:col-6">
-      <div className="col-block">
-        <h3 className="resume-block-title">{heading}</h3>
-        {items?.length &&
-          items.map((item, idx) => (
-            <ResumeItem {...item} key={`resume-${idx}`} />
-          ))}
-      </div>
+    <div className={`col-block resume-block-${heading.toLowerCase()}`}>
+      <h3 className="resume-block-title">{heading}</h3>
+      {items?.length &&
+        items.map((item, idx) => (
+          <ResumeItem {...item} key={`resume-${idx}`} />
+        ))}
     </div>
   );
 };

@@ -1,18 +1,16 @@
 import { useContext, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import content from "../../data";
 import { LightBoxContext } from "../../context";
+import { navbar } from "../../data/contents";
 
 const Navbar: React.FC<{}> = () => {
-  const { navbar } = content;
-
   const { setCurrentLightBoxId } = useContext(LightBoxContext);
   const [toggle, setToggle] = useState(false);
 
   const menuList = () => {
     return (
       <ul className="flex flex-col sm:items-center sm:flex-row">
-        {navbar?.menus &&
+        {navbar?.menus !== null &&
           navbar.menus.map((menu, idx) => (
             <li
               className="nav-item"
@@ -34,7 +32,7 @@ const Navbar: React.FC<{}> = () => {
   return (
     <nav className="absolute top-0 inset-x-0 px-10 py-4 flex justify-between items-center bg-transparent text-white z-10">
       <img
-        src="logo.svg"
+        src="static/logo.svg"
         className="h-14 bg-auto bg-center relative top-1"
         alt="OWENTECH"
       />
@@ -47,7 +45,7 @@ const Navbar: React.FC<{}> = () => {
         <GiHamburgerMenu size={20} onClick={() => setToggle(!toggle)} />
 
         <div
-          className={`absolute top-[30px] right-[0px] px-4 py-2 bg-[#191919] text-white min-w-[200px] ${
+          className={`absolute top-[30px] right-[0px] px-4 py-2 bg-[#191919]/90 text-white min-w-[200px] ${
             toggle ? "opacity-100 max-h-40" : "opacity-0 max-h-0"
           } transition-all duration-500 ease-in}`}
         >

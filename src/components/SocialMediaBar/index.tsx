@@ -1,7 +1,7 @@
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
-import content from "../../data";
-import { SocialMedia } from "../../data/types";
+import { SocialMedia } from "../../data/types/contentTypes";
+import { socialMedias } from "../../data/contents";
 
 const socialMediaIconMap: Record<SocialMedia, React.ReactElement> = {
   Linkedin: <BsLinkedin size={20} />,
@@ -14,9 +14,6 @@ interface SocialMediaProps {
 }
 
 const SocialMediaBar: React.FC<SocialMediaProps> = ({ direction = "v" }) => {
-  const { landing } = content;
-  const { socialMediasMetadata } = landing;
-
   const isHorizontalDisplay = direction === "h";
 
   return (
@@ -25,8 +22,8 @@ const SocialMediaBar: React.FC<SocialMediaProps> = ({ direction = "v" }) => {
         isHorizontalDisplay ? "flex items-center" : ""
       }`}
     >
-      {socialMediasMetadata?.length &&
-        socialMediasMetadata.map((metadata, idx) => {
+      {socialMedias?.length &&
+        socialMedias.map((metadata, idx) => {
           return (
             <li
               key={`${metadata.socialMedia}-${idx}`}

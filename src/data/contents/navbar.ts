@@ -1,6 +1,5 @@
-import { NavbarType } from "./types";
+import { NavbarType } from "../types/contentTypes";
 
 export default {
   menus: ["About", "Resume", "Portfolio"],
-  logo: "OwenLee",
 } as NavbarType;

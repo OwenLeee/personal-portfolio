@@ -169,7 +169,7 @@
   }
 
   .lightbox-container {
-    @apply mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-6xl;
+    @apply mx-auto sm:max-w-xl md:max-w-3xl lg:max-w-7xl;
   }
 
   .lightbox-content {
@@ -268,8 +268,8 @@
     @apply border-l-primary bg-[#161616] border-l-2 border-solid border-transparent relative py-8 pl-12 pr-5;
   }
 
-  .resume-section .col-12:first-child .resume-item:last-child {
-    @apply mb-[60px] lg:mb-0;
+  .col-block:not(:first-of-type) {
+    @apply mt-[60px] lg:mt-0;
   }
 
   .resume-item:last-child {
@@ -289,11 +289,23 @@
   }
 
   .item-details {
-    @apply inline-block mb-[7px];
+    @apply inline-block mb-[7px] text-zinc-300;
+  }
+
+  .resume-item > .item-description-wrapper:not(:first-of-type) {
+    @apply mt-2;
+  }
+
+  .resume-block-experience .item-description {
+    @apply text-primary-light;
   }
 
   .item-description {
-    @apply mb-0;
+    @apply mb-1;
+  }
+
+  .item-description-wrapper > ul > li:not(:last-child) {
+    @apply mb-1;
   }
 
   .skills-section .single-skill:not(:last-child) {
@@ -391,7 +403,7 @@
   }
 
   .portfolio-section .portfolio-grid .portfolio-wrapper .portfolio-img {
-    @apply h-[150px] md:h-[200px] lg:h-[250px] w-full object-cover object-center;
+    @apply h-[150px] md:h-[200px] lg:h-[250px] w-full object-cover;
   }
 
   .portfolio-section .portfolio-grid .portfolio-wrapper:before {

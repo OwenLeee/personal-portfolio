@@ -2,6 +2,7 @@ import { useCallback, useContext } from "react";
 import { LightBoxContext } from "../context";
 import { AiOutlineClose } from "react-icons/ai";
 import { AnimatedBar, SectionHeader } from "../components";
+import { LIGHTBOX_ID } from "../data/constants";
 
 interface ILightBoxLayout {
   lightBoxId: string;
@@ -20,7 +21,7 @@ const LightBoxLayout: React.FC<ILightBoxLayout> = ({
     useContext(LightBoxContext);
 
   const closeLightBox = useCallback(() => {
-    setCurrentLightBoxId("empty"); // TODO: group in constant file
+    setCurrentLightBoxId(LIGHTBOX_ID.empty);
   }, [setCurrentLightBoxId]);
 
   const isActive = lightBoxId === currentLightBoxId;

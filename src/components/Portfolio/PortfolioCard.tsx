@@ -1,21 +1,22 @@
-export interface PortfolioCardProps {
-  title: string;
-  link: string;
-  img: string;
-  category: "Side Projects" | "Forage Virtual Work Experience"; // TODO: to constants
-  tags: { name: string; bgColor: string }[];
-}
+import { PortfolioType } from "../../data/types/contentTypes";
+
+export interface PortfolioCardProps extends PortfolioType {}
 const PortfolioCard: React.FC<PortfolioCardProps> = ({
   title,
   link,
   img,
   category,
   tags,
+  objectPosition = "object-center",
 }) => {
   return (
     <div className="single-item col-6 lg:col-4" data-category={category}>
       <div className="portfolio-wrapper">
-        <img src={`/static/${img}`} alt="Item" className="portfolio-img" />
+        <img
+          src={`/static/${img}`}
+          alt="Item"
+          className={`portfolio-img ${objectPosition}`}
+        />
         <div className="item-content">
           <h6 className="content-title">{title}</h6>
           <a
@@ -35,7 +36,6 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
               {name}
             </span>
           ))}
-        {/* // <span className="tag">{category}</span> */}
       </div>
     </div>
   );

@@ -6,9 +6,9 @@ import navbar from "./navbar";
 import professionals from "./professionals";
 import skills from "./skills";
 import portfolio from "./portfolio";
-import { ContentType } from "./types";
+import socialMedias from "./socialMedias";
 
-const content: ContentType = {
+export {
   navbar,
   landing,
   about,
@@ -17,6 +17,5 @@ const content: ContentType = {
   certificates,
   skills,
   portfolio,
+  socialMedias,
 };
-
-export default content;

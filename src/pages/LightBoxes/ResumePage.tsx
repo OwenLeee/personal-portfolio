@@ -1,4 +1,5 @@
 import { SectionHeader, Resume, Skills } from "../../components";
+import { certificates, education, professionals, skills } from "../../data/contents";
 import { LightBoxLayout } from "../../layouts";
 
 interface ResumePageProps {}
@@ -11,52 +12,21 @@ const ResumePage: React.FC<ResumePageProps> = () => {
     >
       <div className="resume-section single-section">
         <div className="row">
-          <Resume
-            heading="Education"
-            items={[
-              {
-                title: "Computer Science",
-                details: "Cambridge University / 2004 - 2007",
-                description:
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.",
-              },
-              {
-                title: "Bachelor Degree",
-                details: "University of Tokyo / 2008 - 2010",
-                description:
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.",
-              },
-              {
-                title: "Master Degree",
-                details: "Harvard University / 2012 - 2015",
-                description:
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.",
-              },
-            ]}
-          />
-          <Resume
-            heading="Experience"
-            items={[
-              {
-                title: "Computer Science",
-                details: "Cambridge University / 2004 - 2007",
-                description:
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.",
-              },
-              {
-                title: "Bachelor Degree",
-                details: "University of Tokyo / 2008 - 2010",
-                description:
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.",
-              },
-              {
-                title: "Master Degree",
-                details: "Harvard University / 2012 - 2015",
-                description:
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.",
-              },
-            ]}
-          />
+          <div className="col-12 lg:col-6">
+            <Resume
+              heading={professionals.heading}
+              items={professionals.items}
+            />
+          </div>
+          <div className="col-12 lg:col-6">
+            <div className="mt-[60px] lg:mt-[0px] lg:mb-4">
+              <Resume
+                heading={certificates.heading}
+                items={certificates.items}
+              />
+            </div>
+            <Resume heading={education.heading} items={education.items} />
+          </div>
         </div>
       </div>
       <div className="skills-section single-section">
@@ -71,22 +41,21 @@ const ResumePage: React.FC<ResumePageProps> = () => {
         </div>
         <div className="row">
           <div className="col-12 md:col-6">
-            <Skills
-              skills={[
-                { skill: "HTML/CSS", percentage: 95 },
-                { skill: "Web Design", percentage: 80 },
-                { skill: "JavaScript", percentage: 90 },
-              ]}
-            />
+            <Skills skills={[skills.html_css, skills.js_ts, skills.java]} />
+          </div>
+          <div className="col-12 md:col-6">
+            <Skills skills={[skills.react, skills.vue, skills.tailwind]} />
           </div>
           <div className="col-12 md:col-6">
             <Skills
-              skills={[
-                { skill: "React JS", percentage: 90 },
-                { skill: "Express.js", percentage: 95 },
-                { skill: "TypeScript", percentage: 80 },
-              ]}
+              skills={[skills.nodejs, skills.expressjs, skills.spring_boot]}
             />
+          </div>
+          <div className="col-12 md:col-6">
+            <Skills skills={[skills.sql, skills.python, skills.c_sharp]} />
+          </div>
+          <div className="col-12 md:col-6">
+            <Skills skills={[skills.aws, skills.restful_api, skills.graphql]} />
           </div>
         </div>
       </div>

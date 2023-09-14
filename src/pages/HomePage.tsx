@@ -3,11 +3,19 @@ import { AboutMePage, PortfolioPage, ResumePage } from ".";
 import { Navbar, SocialMediaBar } from "../components";
 import { LightBoxContext } from "../context";
 import { LandingLayout } from "../layouts";
+import { landing } from "../data/contents";
+import { LIGHTBOX_ID, PORTFOLIO_CATEGORY } from "../data/constants";
 
 interface HomePageProps {}
 const HomePage: React.FC<HomePageProps> = () => {
-  const [currentLightBoxId, setCurrentLightBoxId] = useState<string>("");
-  const [portfolioFilter, setPortfolioFilter] = useState<string>("All");
+  const { bgVideo, myName, titles } = landing;
+
+  const [currentLightBoxId, setCurrentLightBoxId] = useState<string>(
+    LIGHTBOX_ID.initial
+  );
+  const [portfolioFilter, setPortfolioFilter] = useState<string>(
+    PORTFOLIO_CATEGORY.All
+  );
 
   const LightBoxSharedValue = useMemo(() => {
     return {
@@ -22,10 +30,10 @@ const HomePage: React.FC<HomePageProps> = () => {
     <LightBoxContext.Provider value={LightBoxSharedValue}>
       <LandingLayout
         navbar={<Navbar />}
-        video="bg-video.mp4"
+        video={bgVideo}
         main={{
-          name: "Owen Lee",
-          titles: ["Software Developer", "Full-Stack Developer"],
+          name: myName,
+          titles,
         }}
         socialMedia={<SocialMediaBar />}
         lightBoxes={[AboutMePage, ResumePage, PortfolioPage]}

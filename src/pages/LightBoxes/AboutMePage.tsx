@@ -1,6 +1,7 @@
 import { LightBoxLayout } from "../../layouts";
 import icon from "../../assets/photo-owenlee.jpg";
 import { SocialMediaBar } from "../../components";
+import { about } from "../../data/contents";
 
 interface ContentSingleInfoProps {
   label: string;
@@ -38,6 +39,11 @@ const ContentSingleInfo: React.FC<ContentSingleInfoProps> = ({
 
 interface AboutMePageProps {}
 const AboutMePage: React.FC<AboutMePageProps> = () => {
+  const { funFacts, resumePath, resumeName, name, email, location, from } =
+    about;
+
+  const { question, answer } = funFacts[0];
+
   return (
     <LightBoxLayout
       lightBoxId="About"
@@ -52,39 +58,40 @@ const AboutMePage: React.FC<AboutMePageProps> = () => {
           </div>
           {/* content part */}
           <div className="col-12 lg:basis-7/12">
-            <h2 className="content-subtitle">Who am i?</h2>
-            <h6 className="content-title">
-              I'm Owen Lee, a software developer and full-stack developer
-            </h6>
+            <h2 className="content-subtitle">{question}</h2>
+            <h6 className="content-title">{answer[0]}</h6>
             <div className="content-description">
-              <p>
-                I am a freelancer based in the United Kingdom and i have been
-                building noteworthy UX/UI designs and websites for years, which
-                comply with the latest design trends. I help convert a vision
-                and an idea into meaningful and useful products. Having a sharp
-                eye for product evolution helps me prioritize tasks, iterate
-                fast and deliver faster.
+              <p className="text-left">
+                {answer[1]}
+                <b className="underline decoration-primary-light">
+                  {answer[2]}
+                </b>
+                {answer[3]}
+                <b className="underline decoration-primary-light">
+                  {answer[4]}
+                </b>
+                {answer[5]}
               </p>
             </div>
             <div className="content-info">
               <div className="row">
-                <ContentSingleInfo label={"Name"} value={"Owen Lee"} />
+                <ContentSingleInfo label={"Name"} value={name} />
                 <ContentSingleInfo
                   label={"Email"}
-                  value={"owen55889@gmail.com"}
+                  value={email}
                   tag={"a"}
-                  href={"mailto: owen55889@gmail.com"}
+                  href={`mailto: ${email}`}
                 />
               </div>
               <div className="row">
-                <ContentSingleInfo label={"Location"} value={"Vancouver 🇨🇦"} />
-                <ContentSingleInfo label={"From"} value={"Hong Kong 🇭🇰"} />
+                <ContentSingleInfo label={"Location"} value={location} />
+                <ContentSingleInfo label={"From"} value={from} />
               </div>
             </div>
             <div className="content-ref block sm:flex sm:items-center ">
               <a
-                href="static/resume.pdf"
-                download="Resume - Owen Lee.pdf"
+                href={resumePath}
+                download={resumeName}
                 className="btn download-btn mr-[23px] mb-[27px] sm:mb-0 text-sm text-white"
               >
                 Download CV

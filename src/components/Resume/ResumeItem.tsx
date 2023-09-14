@@ -1,19 +1,38 @@
 export interface ResumeItemProps {
   title: string;
   details: string;
-  description: string;
+  descriptions: { section: string; points: string[] }[];
 }
 const ResumeItem: React.FC<ResumeItemProps> = ({
   title,
   details,
-  description,
+  descriptions,
 }) => {
   return (
     <div className="resume-item">
       <span className="item-arrow"></span>
       <h5 className="item-title">{title}</h5>
       <span className="item-details">{details}</span>
-      <p className="item-description">{description}</p>
+      {descriptions?.length !== null &&
+        descriptions.map(({ section, points }, idx) => (
+          <div
+            className="item-description-wrapper"
+            key={`${title}-section-${idx}`}
+          >
+            <p className="item-description">{section}</p>
+            <ul>
+              {points?.length !== null &&
+                points.map((point, idx) => (
+                  <li
+                    className="list-disc list-inside"
+                    key={`${title}-point-${idx}`}
+                  >
+                    {point}
+                  </li>
+                ))}
+            </ul>
+          </div>
+        ))}
     </div>
   );
 };

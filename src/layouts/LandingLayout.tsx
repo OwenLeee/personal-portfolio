@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { LightBoxContext } from "../context";
+import { LIGHTBOX_ID } from "../data/constants";
 
 type MainContent = {
   name: string;
@@ -12,7 +13,6 @@ interface ILandingLayout {
   main: MainContent;
   socialMedia: React.ReactElement;
   lightBoxes: React.FunctionComponent[];
-  children?: React.ReactNode;
 }
 
 const LandingLayout: React.FC<ILandingLayout> = ({
@@ -21,7 +21,6 @@ const LandingLayout: React.FC<ILandingLayout> = ({
   main,
   socialMedia,
   lightBoxes,
-  children,
 }) => {
   const { name, titles } = main;
 
@@ -36,7 +35,7 @@ const LandingLayout: React.FC<ILandingLayout> = ({
     return () => clearInterval(interval);
   }, [titles.length]);
 
-  const initialLightBoxStage = currentLightBoxId === ""; // TODO: group in constant file
+  const initialLightBoxStage = currentLightBoxId === LIGHTBOX_ID.initial;
 
   return (
     <>
@@ -44,8 +43,8 @@ const LandingLayout: React.FC<ILandingLayout> = ({
         id="overlay-effect"
         className={`${
           initialLightBoxStage
-            ? ""
-            : currentLightBoxId !== "empty" // TODO: group in constant file
+            ? LIGHTBOX_ID.initial
+            : currentLightBoxId !== LIGHTBOX_ID.empty
             ? "animate-up"
             : "animate-down"
         }`}
